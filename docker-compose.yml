@@ -4,7 +4,7 @@ services:
   biomania-frontend:
     image: chatbotuibiomania/biomania-frontend:v1.1.9
     environment:
-      - BACKEND_URL=http://biomania-backend:5000
+      - BACKEND_URL=http://biomania-backend:5001
     ports:
       - "3000:3000"
     restart: always
@@ -17,7 +17,7 @@ services:
     environment:
       - OPENAI_API_KEY=""
     ports:
-      - "5000:5000"
+      - "5001:5001"
     restart: always
     networks:
       - mynetwork

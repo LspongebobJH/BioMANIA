@@ -103,7 +103,7 @@ RUN chmod +x /app/docker_utils/${LIB}/docker_start_script.sh
 # Set environment variables
 ENV CUDA_VISIBLE_DEVICES=0
 ENV PYTHONPATH="/app:${PYTHONPATH}"
-ENV BACKEND_URL="http://localhost:5000"
+ENV BACKEND_URL="http://localhost:5001"
 
 # Expose ports
 EXPOSE 3000

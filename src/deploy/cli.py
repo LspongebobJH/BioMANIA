@@ -36,7 +36,7 @@ def create_request(text, lib, session_id, filepath=None):
         request_data['files'].append(file_content)
     return request_data
 
-def send_request_to_backend(data, url = "http://localhost:5000/stream"):
+def send_request_to_backend(data, url = "http://localhost:5001/stream"):
     """Send the request to the backend server with streaming response."""
     response = requests.post(url, json=data, stream=True)
     return response.iter_lines()

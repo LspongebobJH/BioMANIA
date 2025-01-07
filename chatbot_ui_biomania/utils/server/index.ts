@@ -14,7 +14,7 @@ export class OpenAIError extends Error {
   }
 }
 
-export const url = process.env.BACKEND_URL || "http://localhost:5000"
+export const url = process.env.BACKEND_URL || "http://localhost:5001"
 const streamUrl = url + '/stream';
 
 export const BioMANIAStream = async (

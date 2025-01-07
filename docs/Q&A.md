@@ -64,7 +64,7 @@ A: We provide the start_script.sh to run backend and frontend command simultaneo
 
 Initiate the [ngrok service](https://ngrok.com/docs/getting-started/) script in a new terminal on the same device with back-end device and get the print url like `https://[ngrok_id].ngrok-free.app` with:
 ```bash
-ngrok http 5000
+ngrok http 5001
 ```
 
 Then you can substitute the url from `chatbot_ui_biomania/utils/server/index.ts` in front-end code and start its service

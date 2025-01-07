@@ -198,3 +198,4 @@ cython_debug/
 log_file.txt
 tmp/
 __MACOSX/
+resources/

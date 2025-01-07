@@ -16,7 +16,7 @@ spec:
       - name: biomania-backend
         image: chatbotuibiomania/biomania-backend:v1.1.9
         ports:
-        - containerPort: 5000
+        - containerPort: 5001
         env:
         - name: OPENAI_API_KEY
           value: ""

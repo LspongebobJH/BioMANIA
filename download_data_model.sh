@@ -27,4 +27,4 @@ rm -rf data_in_one_file
 gdown https://drive.google.com/uc?id=18ZMorTuFF-Q8_w-V9yTlLsCkw6ONyuss -O your_third_file
 unzip your_third_file
 rm -rf your_third_file
-mv resources ../../resources
+# mv resources ../../resources

@@ -75,7 +75,30 @@ LLM_HISTORY_LEN = 20
 FP16 = True
 LLM_DEVICE = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
 
+"""
+load from local env
+"""
 from dotenv import load_dotenv
 load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', 'sk-test')
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
+
+OLLAMA_HOST = os.getenv('OLLAMA_HOST', 'http://localhost:11434/api/generate')
+LLM_MODEL = os.getenv('LLM_MODEL', 'gpt-4o-mini-2024-07-18')
+
+"""
+multiprocessing config
+"""
+import multiprocessing
+multiprocessing.set_start_method('fork', force=True)
+"""
+note(jiahang):
+From python3.8 in macos and python3.14 in other OS, 
+the default start method of multiprocessing is 'spawn', 
+which not allow pickling TextIOWrapper object in subprocess, and thus 
+hindering the processing of files in subprocess.
+(ref1: https://github.com/davidemms/OrthoFinder/issues/570#issuecomment-875518293)
+(ref2: https://github.com/GoogleCloudPlatform/gsutil/issues/961#issuecomment-604648510)
+
+The 'fork' method is used to avoid this issue.
+"""

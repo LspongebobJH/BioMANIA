@@ -8,7 +8,8 @@
             "name": "inference_dialog_server",
             "type": "debugpy",
             "request": "launch",
-            "module": "src.deploy.inference_dialog_server"
+            "module": "src.deploy.inference_dialog_server",
+            "justMyCode": true
         }
     ]
 }

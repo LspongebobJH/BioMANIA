@@ -325,8 +325,8 @@ def extract_last_error_sentence_from_list(log):
 basic_types.append('Any')
 
 class Model:
-    # def __init__(self, logger, device, model_llm_type="gpt-4o-mini-2024-07-18"): # llama3,  #  #   gpt-4-turbo #  # gpt-3.5-turbo-0125
-    def __init__(self, logger, device, model_llm_type="gpt-3.5-turbo-0125"): # llama3,  #  #   gpt-4-turbo #  # gpt-3.5-turbo-0125
+    def __init__(self, logger, device): # llama3,  #  #   gpt-4-turbo #  # gpt-3.5-turbo-0125
+    # def __init__(self, logger, device, model_llm_type="gpt-3.5-turbo-0125"): # llama3,  #  #   gpt-4-turbo #  # gpt-3.5-turbo-0125
         # IO
         self.image_folder = "./tmp/images/"
         os.makedirs(self.image_folder, exist_ok=True)
@@ -344,7 +344,7 @@ class Model:
         self.ambi_related_apis_json = []
         self.user_query_list = []
         self.prompt_factory = PromptFactory()
-        self.model_llm_type = model_llm_type
+        self.model_llm_type = LLM_MODEL
         self.logger = logger
         self.device=device
         self.indexxxx = 1

@@ -9,7 +9,7 @@ import requests, json
 
 def generate_completion_stream(model_name, prompt):
     # Requires Ollama downloaded!
-    api_url = "http://localhost:11434/api/generate"  # Replace with the actual API URL if different
+    api_url = OLLAMA_HOST
     headers = {"Content-Type": "application/json"}
     payload = {
         "model": model_name,
@@ -36,12 +36,13 @@ def generate_completion_stream(model_name, prompt):
 def LLM_response(chat_prompt,llm_model="gpt-3.5-turbo-0125",history=[],kwargs={}): # "gpt-4-0125-preview"
     """
     get response from LLM
+    TODO(jiahang): support stream output
     """
     if llm_model.startswith('gpt-3.5') or llm_model.startswith('gpt-4') or llm_model.startswith('gpt3.5') or llm_model.startswith('gpt4'):
         gpt_interface.setup_openai('', mode='openai')
         response = gpt_interface.query_openai(chat_prompt, mode="openai", model=llm_model, max_tokens=MAX_NEW_TOKENS)
         history.append([chat_prompt, response])
-    elif llm_model in ['llama3','llama2','mistral','dolphin-phi','phi','neural-chat','starling-lm','codellama','llama2-uncensored','llama2:13b','llama2:70b','orca-mini','vicuna','llava','gemma:2b','gemma:7b']:
+    elif llm_model in ['llama3','llama2','mistral','dolphin-phi','phi','neural-chat','starling-lm','codellama','llama2-uncensored','llama2:13b','llama2:70b','orca-mini','vicuna','llava','gemma:2b','gemma:7b','qwen2:0.5b']: # TODO(jiahang): models list not aligned with ollama
         # use ollama instead, required ollama installed and models downloaded, https://github.com/ollama/ollama/tree/main?tab=readme-ov-file
         response = generate_completion_stream(llm_model, chat_prompt)
         history.append([chat_prompt, response])

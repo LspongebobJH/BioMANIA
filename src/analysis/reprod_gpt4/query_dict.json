@@ -1,0 +1,16 @@
+{
+    "scanpy:1": "Provide the python code for batch correction with the API only from Scanpy. Apply it to the built-in pbmc3k processed dataset and pbmc68k reduced dataset.",
+    "scanpy:2": "Provide the python code for trajectory inference with the API only from Scanpy. Apply it to the built-in pbmc3k processed dataset.",
+    "scanpy:3": "Provide the python code for plotting the ranking of genes with the API only from Scanpy. Apply it to the built-in pbmc3k processed dataset.",
+    "scanpy:4": "Provide the python code for visualizing the genes expression values through violin figure with the API only from Scanpy. Apply it to the built-in pbmc3k processed dataset.",
+    "scanpy:7": "Provide the python code for computing Moran’s I metric of the data with the API only from Scanpy. Apply it to the built-in pbmc3k processed dataset.",
+    "scanpy:8": "Provide the python code for plotting the density of cells in umap embedding with the API only from Scanpy. Apply it to the built-in pbmc3k processed dataset.",
+    "scanpy:9": "Provide the python code for drawing a hierarchically clustered heatmap with the API only from Scanpy. Apply it to the built-in pbmc3k processed dataset.",
+    "scanpy:10": "Provide the python code for visualizing the genes expression values through dotplot with the API only from Scanpy. Apply it to the built-in pbmc3k processed dataset.",
+    "scanpy:11": "Provide the python code for visualizing the genes expression values through tracksplot with the API only from Scanpy. Apply it to the built-in pbmc3k processed dataset.",
+    "scanpy:6": "Provide the python code for visualizing the genes expression values through heatmap with the API only from Scanpy. Apply it to the built-in pbmc3k processed dataset.",
+    "ehrapy:1": "Provide the Python code for Kaplan-Meier Survival analysis with the API only from Ehrapy. Apply the analysis to the MIMIC-II dataset.",
+    "ehrapy:2": "Provide the Python code for causal inference with the API only from Ehrapy. Apply the analysis to the MIMIC-II dataset.",
+    "ehrapy:3": "Provide the python code for computing the neighborhood graph on data with the API only from Ehrapy. Apply it to the built-in heart failure dataset.",
+    "ehrapy:4": "Provide the python code for computing the neighborhood graph on data with the API only from Ehrapy. Apply it to the built-in dermatology dataset."
+}

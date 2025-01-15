@@ -200,3 +200,4 @@ tmp/
 __MACOSX/
 resources/
 figures/
+*.h5ad

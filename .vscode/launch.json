@@ -5,6 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "test",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.inference.execution_UI",
+            "args": [
+                
+            ]
+        },
+        {
             "name": "inference_dialog_server",
             "type": "debugpy",
             "request": "launch",

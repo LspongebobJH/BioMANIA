@@ -201,3 +201,5 @@ __MACOSX/
 resources/
 figures/
 *.h5ad
+*.h5
+data/

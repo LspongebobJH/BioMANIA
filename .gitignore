@@ -203,3 +203,4 @@ figures/
 *.h5ad
 *.h5
 data/
+*.db
